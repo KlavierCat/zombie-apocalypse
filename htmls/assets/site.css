@@ -42,6 +42,7 @@ div{
   z-index:-1;
 }
 
+/*The following only works for @media screen and (min-width:680px)*/
 .bar-container{
   position:fixed;
   width:100%;
