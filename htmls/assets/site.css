@@ -1,0 +1,78 @@
+/*last modified: July 02, by Panpan*/
+
+/*universal*/
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+/*end of universal*/
+
+/*map - potential to be moved to universal, or at least to any page that will adopt this basic layout*/
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  line-height:15px;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div{
+  display:block;
+}
+
+.logo{
+  position:fixed;
+  left:2.5%;
+  top:30px;
+  z-index:2;
+  color:#ececec;
+  font-size:2em;
+  font-weight:bold;
+  font-family: Algerian, "Viner Hand ITC", "Stencil Std", Chiller, "Times New Roman", Serif;
+}
+
+.logo a{
+  text-decoration:none;
+  color:#ececec;
+}
+
+#map{
+  z-index:-1;
+}
+
+.bar-container{
+  position:fixed;
+  width:100%;
+  bottom:50px;
+  z-index:4;
+  height:50px;
+  line-height:50px;/*together with height to achieve text vertical-align: middle*/
+}
+
+footer{
+  color: #ececec;
+  width: 200px;
+  float: left;
+  margin-left: 2.5%;
+  position: fixed;
+  z-index: 5;
+  font-size: 0.8em; 
+  line-height:59px;
+}
+
+footer a{
+  color:#ececec;
+}
+
+nav{
+  margin-right:2.5%;
+  width:60%;
+  float:right;
+  background-color:rgba(236, 236, 236, 0.8);
+  color:#010303;
+  z-index:4;
+  text-align:center;
+  box-shadow:5px 10px 15px 0px rgba(220,220,230,0.6);
+}
