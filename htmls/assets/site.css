@@ -31,6 +31,7 @@ div{
   font-size:2em;
   font-weight:bold;
   font-family: Algerian, "Viner Hand ITC", "Stencil Std", Chiller, "Times New Roman", Serif;
+  line-height:100%;
 }
 
 .logo a{
@@ -42,38 +43,68 @@ div{
   z-index:-1;
 }
 
-/*The following only works for @media screen and (min-width:680px)*/
+
 .bar-container{
   position:fixed;
   width:100%;
-  bottom:50px;
   z-index:4;
   height:50px;
-  line-height:50px;/*together with height to achieve text vertical-align: middle*/
 }
 
 footer{
-  color: #ececec;
+  position:fixed;
+  color:#ececec;
+  z-index:5;
+  font-size:0.8em;
   width: 200px;
-  float: left;
-  margin-left: 2.5%;
-  position: fixed;
-  z-index: 5;
-  font-size: 0.8em; 
-  line-height:59px;
+  float:left;
+  margin-left: 2.5%; 
 }
 
 footer a{
   color:#ececec;
+
 }
 
 nav{
-  margin-right:2.5%;
-  width:60%;
   float:right;
+  margin-right:2.5%;
   background-color:rgba(236, 236, 236, 0.8);
   color:#010303;
   z-index:4;
   text-align:center;
   box-shadow:5px 10px 15px 0px rgba(220,220,230,0.6);
+}
+
+@media screen and (min-width:680px){
+  .bar-container{
+    bottom:50px;
+  }
+
+  footer{
+    line-height:59px;
+    }
+
+  nav{
+    height:50px;
+    line-height:50px;/*together with height to achieve text vertical-align: middle*/
+    width:60%;
+  }
+}
+
+@media screen and (max-width:679px){
+  #span-filter{
+    visibility:hidden;
+  }
+  .bar-container{
+    bottom:20px;
+  }
+  nav{
+    width:100px;
+    height:40px;
+    line-height:40px;
+  }
+  footer{
+    line-height:45px;
+  }
 }
