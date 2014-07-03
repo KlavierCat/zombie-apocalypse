@@ -5,7 +5,7 @@ body { margin:0; padding:0; }
 #map { position:absolute; top:0; bottom:0; width:100%; }
 /*end of universal*/
 
-/*map - potential to be moved to universal, or at least to any page that will adopt this basic layout*/
+/*map-based universal*/
 body{
   margin: 0;
   padding: 0;
@@ -108,3 +108,25 @@ nav{
     line-height:45px;
   }
 }
+/*end of map-base universal*/
+
+/*rules affecting the tooltips within maps with the custom-popup class.*/
+.custom-popup .leaflet-popup-content-wrapper{
+  background:#2c3e50;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
+}
+.custom-popup .leaflet-popup-content-wrapper a{
+  color:rgba(255,255,255,0.5);
+}
+.custom-popup .leaflet-popup-tip-container{
+  width:30px;
+  height:15px;
+}
+.custom-popup .leaflet-popup-tip {
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:15px solid #2c3e50;
+}
+/*end of custom tooltips with the custom-popup class*/
