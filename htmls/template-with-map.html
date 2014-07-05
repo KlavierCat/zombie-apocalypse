@@ -3,11 +3,13 @@
 
 <head>
 	<meta charset=utf-8 />
-	<title>TCD Zombie Apocalypse (Gamma)</title>
+	<title>Trinity Zombie Dublin</title>
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1.2' />
 	<!--MapBox stylesheet and script-->
-	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--	<script src="assets/markers.geojson"></script>  only necessary for customized background, used together with another js file-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel='stylesheet' />
 	<!--end of MapBox stylesheet and script-->
 	<link href='assets/site.css' rel="stylesheet"/>
 </head>
@@ -19,7 +21,7 @@
 	<script src='assets/map.js'></script> <!--CAN NOT be moved to the header section, because it needs the map div to be constructed first-->
 	
 	<div class="logo">
-	  <a href="#">TCD ZOMBIE APOCALYPSE C</a>
+	  <a href="#">TZD</a>
 	</div>
 	  
 	<div class="bar-container">

@@ -14,7 +14,7 @@ body{
   font-size: 100%;
   line-height:15px;
   vertical-align: baseline;
-  background: transparent;
+  background: #010303;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -110,23 +110,54 @@ nav{
 }
 /*end of map-base universal*/
 
-/*rules affecting the tooltips within maps with the custom-popup class.*/
-.custom-popup .leaflet-popup-content-wrapper{
-  background:#2c3e50;
-  color:#fff;
-  font-size:16px;
-  line-height:24px;
+/*rules affecting the popup-map class in the map page*/
+.popup-map{
+  position:fixed;
+  bottom:50%;
+  margin-left:7%;
+  z-index:1002;
+  background-color:transparent;
+  color:#ececec;
+  font-family: "Viner Hand ITC", Serif;
+  font-weight:bold;
+  border:0;
+  font-size:22px;
+  text-shadow:2px 2px rgba(217,0,0,0.7);
+   
+  -webkit-animation:fadein 1s; /*Safari and Chrome*/
+  -moz-animation:fadein 1s; /*Firefox*/
+  -ms-animation:fadein 1s; /*IE*/
+  -o-animation:fadein 1s; /*Opera*/
+  animation:fadein 1s;
 }
-.custom-popup .leaflet-popup-content-wrapper a{
-  color:rgba(255,255,255,0.5);
+
+@keyframes fadein{
+	from {opacity:0;}
+	to  {opacity:1;}
 }
-.custom-popup .leaflet-popup-tip-container{
-  width:30px;
-  height:15px;
+
+/*Firefox*/
+@-moz-keyframes fadein{
+	from {opacity:0;}
+	to  (opacity:1;)
 }
-.custom-popup .leaflet-popup-tip {
-  border-left:15px solid transparent;
-  border-right:15px solid transparent;
-  border-top:15px solid #2c3e50;
+
+/*Safari and Chrome*/
+@-webkit-keyframes fadein{
+	from {opacity:0;}
+	to  {opacity:1}
 }
-/*end of custom tooltips with the custom-popup class*/
+
+/*IE*/
+@-ms-keyframes fadein{
+	from {opacity:0;}
+	to  {opacity:1;}
+}
+
+/*Opera*/
+@-0-keyframes fadein{
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
+/*end of popup-map class in the map page*/
