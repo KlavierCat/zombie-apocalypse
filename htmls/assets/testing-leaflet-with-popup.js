@@ -3,11 +3,11 @@ var map = new L.Map('map',{
 	zoomControl:false
 });
 
-//Disable zoom and drag handlers
-map.dragging.disable();
+//Disable zoom and drag handlers, leaves dragging function;
+//map.dragging.disable();
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
-map.scrollWheelZoom.disable();
+//map.scrollWheelZoom.disable();
 
 // Disable tap handler, if present.
 if (map.tap) map.tap.disable();
@@ -16,8 +16,21 @@ if (map.tap) map.tap.disable();
 var zombieLayer = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/klaviercat.ilh01oim/{z}/{x}/{y}.png');
 
 //Set the centre of the map
-var center = new L.LatLng(53.3437, -6.253);
-map.setView(center, 16);
+var center = new L.LatLng(53.3437,-6.2528);
+map.setView(center,17);
+//map.fitBounds([
+//	[53.345812,-6.259741],
+//	[53.341713,-6.245847]
+//]);
+window.addEventListener('resize', function(event){
+	var width=document.documentElement.clientWidth;
+	if (width < 1200){
+		map.setZoom(16);
+	} else {
+		map.setZoom(17);
+	}
+});
+
 
 //Load the background tiles
 map.addLayer(zombieLayer);
