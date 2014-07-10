@@ -17,6 +17,11 @@ div{
   display:block;
 }
 
+
+*{
+  box-sizing: border-box;
+}
+
 .corner{
   position:fixed;
   z-index:2;
@@ -239,3 +244,59 @@ nav{
 }
 
 /*end of popup-map class in the map page*/
+
+/*beginning of Kyle's code - Inventory styling*/
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  //border: 3px solid #CCC;
+  z-index: -1;
+  background: linear-gradient(-15deg, #FFC200 1%, #808000 30%, #000000 100%);
+  }
+  .container .carousel {
+    height: 350px;
+    width: 100%;
+    margin-top: 20%;
+    margin: 10% auto; 
+    //border: 3px solid #CCC;}
+    .container .carousel ul {
+      list-style-type: none;
+      margin-top: 4px;
+      width: 6000px;
+      overflow: hidden;
+      height: 100%;
+      margin-left: 0;
+      left: 0;
+      padding-left: 1px; }
+      .container .carousel ul li {
+        display: inline;
+        width: 150px;
+        height: 90%;
+        float: left;
+       //border: 3px solid #CCC; 
+        border-radius: 10px;
+        margin-right: 25px;
+        background: #CCA300;
+      }
+
+.container .carousel ul li a{
+    text-decoration: none;
+    //font-color: black;
+    top: 20px;
+  }
+
+
+.navPrev{
+  float: left;
+  cursor: pointer;
+
+  }
+
+.navNext{
+  float: right;
+  cursor: pointer; 
+  }
+
+
