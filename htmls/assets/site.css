@@ -18,9 +18,6 @@ div{
 }
 
 
-*{
-  box-sizing: border-box;
-}
 
 .corner{
   position:fixed;
@@ -251,10 +248,31 @@ nav{
   width: 100%;
   height: 100%;
   position: absolute;
+  overflow: hidden;
   //border: 3px solid #CCC;
   z-index: -1;
   background: linear-gradient(-15deg, #FFC200 1%, #808000 30%, #000000 100%);
-  }
+  }  
+
+/*
+.container:before{
+
+	content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #FFC200 url("http://i.imgur.com/inAhQCX.png") no-repeat top center;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+}
+*/
+
   .container .carousel {
     height: 350px;
     width: 100%;
@@ -300,3 +318,5 @@ nav{
   }
 
 
+*, *:before, *:after {
+  box-sizing: border-box; }
