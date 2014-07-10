@@ -1,5 +1,10 @@
 /*last modified: July 02, by Panpan*/
 /*universal*/
+
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,15 +13,17 @@ body {
   font-size: 100%;
   line-height: 15px;
   vertical-align: baseline;
-  background: #FFC200 ;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+ 
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 
 div {
   display: block; }
 
+
 .corner {
   position: fixed;
-  z-index: 2;
+  //z-index: 2;
   height: 90px;
   width: 150px; }
 
@@ -228,23 +235,24 @@ nav {
 /*end of popup-map class in the map page*/
 /*styling for list*/
 .container {
-  width: 70%;
-  height: 700px;
-  position: relative;
-  margin: 0 15%;
-  border: 3px solid #CCC;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  //border: 3px solid #CCC;
+  z-index: -1;
+  background: linear-gradient(-15deg, #FFC200 1%, #808000 30%, #000000 100%);
   }
   .container .carousel {
     height: 350px;
     width: 100%;
-    //padding-top: 15%;
-    overflow: hidden;
+    margin-top: 20%;
     margin: 10% auto; 
-    border: 3px solid #CCC;}
+    //border: 3px solid #CCC;}
     .container .carousel ul {
       list-style-type: none;
       margin-top: 4px;
-      width: 2000px;
+      width: 6000px;
+      overflow: hidden;
       height: 100%;
       margin-left: 0;
       left: 0;
@@ -254,13 +262,28 @@ nav {
         width: 150px;
         height: 90%;
         float: left;
-        border: 3px solid #CCC; 
-        border-radius: 10px;}
+       //border: 3px solid #CCC; 
+        border-radius: 10px;
+        margin-right: 25px;
+        background: #CCA300;
+      }
 
-.navPrev {
+.container .carousel ul li a{
+    text-decoration: none;
+    //font-color: black;
+    top: 20px;
+  }
+
+
+.navPrev{
   float: left;
-  cursor: pointer; }
+  cursor: pointer;
 
-.navNext {
+  }
+
+.navNext{
   float: right;
-  cursor: pointer; }
+  cursor: pointer; 
+  }
+
+
