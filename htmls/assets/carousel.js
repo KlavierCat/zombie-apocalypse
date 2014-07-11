@@ -32,9 +32,18 @@ $('.navPrev').on('click',function(){
        +'px'}
       ,speed);
 });
+
+
+function Node(element){
+  this.element = element;
+  this.next = null;
+  this.previous = null;
+}
+
 });
 
 //NOTE BY KYLE
 //I would like to recode all of the above behaviour as a circular linked
-//list with no need for jQuery
+//list
 //it would be /far/ more elegant and less prone to breaking, I think
+
