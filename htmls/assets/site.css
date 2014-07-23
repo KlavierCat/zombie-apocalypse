@@ -25,24 +25,25 @@ div{
   height:90px;
   width:150px;
 }
-/*
+
+/*just liberated from comment*/
 #corner-logo{
   left:0px;
   top:0px;
   border-bottom:2px solid #B9B9B9;
 }
-*/
+
 .#corner-logo img{
   max-height:90px;
 }
 
-/*
+/*just liberated from comment*/
 #corner-mute{
 	right:0px;
 	top:0px;
     border-bottom:2px solid #B9B9B9;
 }
-*/
+
 
 #corner-mute img{
 	position:fixed;
@@ -51,7 +52,7 @@ div{
 	max-height:50px;
 }
 
-/*
+/*just liberated*/
 #corner-footer{
 	height:60px;
 	width:170px;
@@ -59,7 +60,7 @@ div{
 	bottom:0px;
 	border-top:2px solid #B9B9B9;
 }
-*/
+
 
 #corner-nav{
 	height:42px;
@@ -76,7 +77,7 @@ div{
 	width:105px;
 	height:1px;
 }
-/*
+/*just liberated big-chunk*/
 #northWest{
 	left:123px;
 	top:45px;
@@ -87,8 +88,8 @@ div{
 	-ms-transform:rotate(-60deg);
 	transform:rotate(-60)deg;
 }
-*/
-/*
+
+
 #northEast{
 	right:123px;
 	top:45px;
@@ -99,8 +100,8 @@ div{
 	-ms-transform:rotate(60deg);
 	transform:rotate(60)deg;	
 }
-*/
-/*
+
+
 #southWest{
 	width:71px;
 	left:152px;
@@ -124,7 +125,7 @@ div{
 	-ms-transform:rotate(-60deg);
 	transform:rotate(-60)deg;	
 }
-*/
+/*end of just liberated big-chunk*/
 footer{
   position:fixed;
   z-index:5;
