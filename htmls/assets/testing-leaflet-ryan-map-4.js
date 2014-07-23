@@ -3,7 +3,7 @@ var map = new L.Map('map',{
 	zoomControl:false
 });
 
-//Disable zoom and drag handlers, as well as dragging function;
+//Disable zoom handlers, disable dragging function;
 map.dragging.disable();
 map.touchZoom.disable();
 map.doubleClickZoom.disable();
@@ -16,12 +16,12 @@ if (map.tap) map.tap.disable();
 var zombieLayer = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/klaviercat.ilh01oim/{z}/{x}/{y}.png');
 
 //Set the centre of the map
-var center = new L.LatLng(53.343794,-6.25439);
-map.setView(center,17);
-//map.fitBounds([
-//	[53.34189,-6.259525],
-//	[53.345484,-6.249404]
-//]);
+//var center = new L.LatLng(53.343794,-6.25439);
+//map.setView(center,17);
+map.fitBounds([
+	[53.34189,-6.259525],
+	[53.345484,-6.249404]
+]);
 
 var imageUrl='https://www.scss.tcd.ie/~plin/zombie/images/map-big-new-black.jpg',
 //	imageBounds = [[53.34589,-6.26171],[53.34167,-6.24707]]; northWest, southEast
@@ -32,10 +32,11 @@ var imageUrl='https://www.scss.tcd.ie/~plin/zombie/images/map-big-new-black.jpg'
 L.imageOverlay(imageUrl,imageBounds).addTo(map);
 
 
-//window.addEventListener('resize', function(event){
-//	var width=document.documentElement.clientWidth;	
-//	if (width > 1900){
-//		map.setZoom(17.5);
+window.addEventListener('resize', function(event){
+	var width=document.documentElement.clientWidth;	
+	if (width < 640){
+		map.setZoom(16);
+		map.dragging.enable();
 //	} else if (width > 1281){
 //		map.setZoom(17.3);
 //	} else if (width > 1010) {
@@ -45,9 +46,21 @@ L.imageOverlay(imageUrl,imageBounds).addTo(map);
 //	} else {
 //		map.setZoom(15);
 //	}
-//});
+};
+});
 
 //map.setZoom(17.5);
+
+//set icon for markers
+var redIcon = L.icon({
+	iconUrl:'images/marker.png',
+	iconSize:[20,20],
+	iconAnchor:[10,10]
+//popupAnchor:
+})
+//location [53.34258,-6.25125]
+//location:[53.34228,-6.25141]
+//L.marker([x,y],{icon:redIcon}).addTo(map);
 
 //Load the background tiles
 map.addLayer(zombieLayer);
@@ -96,6 +109,27 @@ var onEachFeature = function(feature, layer) {
 			}).appendTo(popup);
 			//add the popup to the map
 			popup.appendTo("#map");
+			//onclick event
+			layer.on("click",function(e){
+				map.fitBounds(e.target.getBounds());
+//				map.panTo(e.latlng);
+//				map.setZoom(18);
+//				map.on('zoomned', function(e){
+//					map.panTo(e,latlng);
+//				});
+				map.removeLayer(featureLayer);
+				$("#popup-"+properties.ID).remove();
+
+//Todo: the marker should be loaded via GeoJson!
+				//location [53.34258,-6.25125]
+				//location:[53.34228,-6.25141]
+				L.marker([53.34258,-6.25125],{icon:redIcon}).addTo(map).bindPopup();
+				L.marker([53.34228,-6.25141],{icon:redIcon}).addTo(map).bindPopup();	
+//might be useful in the future:
+//				map.addLayer(marker);
+//				map.removeLayer(marker);
+//Todo: add a back-button which will send the user back to the original setting/map if clicked, and suicide once the original setting/map is achieved.
+			});
 		});
 		//create a mouseover event that undoes the mouseover changes
 		layer.on("mouseout",function(e){
@@ -103,7 +137,9 @@ var onEachFeature = function(feature, layer) {
 			layer.setStyle(defaultStyle);
 			//and then destroying the popup
 			$("#popup-"+properties.ID).remove();
+			//map.panTo(center);
 		});
+
 		//close the "anonymous" wrapper function, and call it while passing
 		// in the variables necessary to make the events work the way we want.
 	})(layer, feature.properties);
