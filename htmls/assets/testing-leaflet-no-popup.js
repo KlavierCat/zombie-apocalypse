@@ -1,3 +1,4 @@
+
 //Initiate map object and enable user dragging and zooming
 var map = new L.Map('map',{
 	zoomControl:false
@@ -13,7 +14,7 @@ map.scrollWheelZoom.disable();
 if (map.tap) map.tap.disable();
 
 //Prepare the background tile layer
-var zombieLayer = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/klaviercat.ilh01oim/{z}/{x}/{y}.png');
+var zombieLayer = new L.TileLayer('http://{s}.tiles.mapbox.com/v3/klaviercat.ilgaaoeg/{z}/{x}/{y}.png');
 
 //Set the centre of the map
 var center = new L.LatLng(53.3437, -6.253);
