@@ -7,7 +7,7 @@ var speed = 600,
                   .css('width')
                     .split('px')[0] ;
 
-$('.navNext').on('click',function(){
+$('#navNext').on('click',function(){
   currSel = (currSel+5)%itemCount;
 
   //while less than itemCount currSel will always increment by 1
@@ -19,7 +19,7 @@ $('.navNext').on('click',function(){
   $('.carousel ul').animate({marginLeft: '-' + (currSel*itemWidth) +'px'},speed);
 });
 
-$('.navPrev').on('click',function(){
+$('#navPrev').on('click',function(){
   currSel =((currSel==0)
                 ?itemCount
                 :(currSel))-5 ;

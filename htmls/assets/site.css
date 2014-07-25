@@ -321,16 +321,22 @@ nav{
   }
 
 
-.navPrev{
-  float: left;
+#button_wrapper{
+  width: 150px;
+  margin: 0 auto; 
+  padding: .5rem;
+  bottom: 15%;
+  position: relative;
+}
+
+#button_wrapper button{
+  border-radius: .3rem;
   cursor: pointer;
-
+  padding: .7rem;
+  box-shadow: inset 0 0 8px #54958A;
   }
 
-.navNext{
-  float: right;
-  cursor: pointer; 
-  }
+
 
 
 *, *:before, *:after {
