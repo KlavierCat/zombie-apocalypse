@@ -1,0 +1,358 @@
+/*last modified: July 02, by Panpan*/
+
+/*universal*/
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  line-height:15px;
+  vertical-align: baseline;
+  background: #010303;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+div{
+  display:block;
+}
+
+.corner{
+  position:fixed;
+  z-index:2;
+/*  height:90px;
+  width:150px;*/
+}
+
+#corner-logo{
+  left:0px;
+  top:0px;
+/*  border-bottom:2px solid #B9B9B9;*/
+}
+
+/*
+.#corner-logo img{
+  max-height:90px;
+}
+*/
+
+#corner-mute{
+	right:0px;
+	top:0px;
+ /*   border-bottom:2px solid #B9B9B9;*/
+}
+
+
+#corner-mute img{
+	position:fixed;
+	right:20px;
+	top:20px;
+	max-height:50px;
+}
+
+/*just liberated*/
+#corner-footer{
+	height:60px;
+	width:170px;
+	left:0px;
+	bottom:0px;
+	border-top:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
+}
+
+#corner-nav{
+	height:60px;
+	width:170px;
+	right:0px;
+	bottom:0px;
+	border-top:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
+}
+
+.diagonal-line{
+	position:fixed;
+	width:105px;
+	height:1px;
+}
+/*
+#northWest{
+	left:123px;
+	top:45px;
+	border-top:2px solid #B9B9B9;
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+	-o-transform:rotate(-60deg);
+	-ms-transform:rotate(-60deg);
+	transform:rotate(-60)deg;
+}
+
+
+#northEast{
+	right:123px;
+	top:45px;
+	border-top:2px solid #B9B9B9;
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+	-o-transform:rotate(60deg);
+	-ms-transform:rotate(60deg);
+	transform:rotate(60)deg;	
+}
+*/
+
+#southWest{
+	width:71px;
+	left:152px;
+	bottom:30px;
+	border-bottom:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
+	-webkit-transform:rotate(60deg);
+	-moz-transform:rotate(60deg);
+	-o-transform:rotate(60deg);
+	-ms-transform:rotate(60deg);
+	transform:rotate(60)deg;		
+}
+
+#southEast{
+	width:71px;
+	right:152px;
+	bottom:30px;
+	border-bottom:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+	-o-transform:rotate(-60deg);
+	-ms-transform:rotate(-60deg);
+	transform:rotate(-60)deg;	
+}
+
+footer{
+  position:fixed;
+  z-index:5;
+  left:20px;
+  bottom:10px;
+}
+
+footer a{
+    color:#ececec;
+    font-size:1em;
+	line-height:20px;
+}
+
+footer img{
+	position:relative;
+	max-height:30px;
+	max-width:30px;
+	margin-bottom:-7px;
+}
+
+nav{
+	position:fixed;
+	right:30px;
+	bottom:20px;
+	color:#ECECEC;
+	font-size:1.3em;
+}
+
+.view-nav{
+	position:fixed;
+	bottom:0px;
+	height:42px;
+}
+
+.view-nav img{
+	position:relative;
+	margin:5px 10px;
+	max-height:30px;
+	max-width:30px;
+}
+
+#map-nav{
+	position:fixed;
+	right:350px;
+	border-right:1px solid #B9B9B9;
+}
+
+#inv-nav{
+	position:fixed;
+	right:300px;
+	border-right:1px solid #B9B9B9;
+}
+/*end of universal*/
+
+/*map-based universal*/
+#map{
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  width:100%;
+  z-index:-1;
+}
+
+/*end of map-base universal*/
+
+/*rules affecting the popup-map class in the map page*/
+.popup-map{
+  position:fixed;
+  top:20%;
+  margin-left:65%;
+  z-index:1002;
+  background-color:transparent;
+  color:#ececec;
+  font-family: "Viner Hand ITC", Serif;
+  font-weight:bold;
+  border:0;
+  font-size:22px;
+  text-shadow:2px 2px rgba(217,0,0,0.7);
+   
+  -webkit-animation:fadein 1s; /*Safari and Chrome*/
+  -moz-animation:fadein 1s; /*Firefox*/
+  -ms-animation:fadein 1s; /*IE*/
+  -o-animation:fadein 1s; /*Opera*/
+  animation:fadein 1s;
+}
+
+@keyframes fadein{
+	from {opacity:0;}
+	to  {opacity:1;}
+}
+
+/*Firefox*/
+@-moz-keyframes fadein{
+	from {opacity:0;}
+	to  (opacity:1;)
+}
+
+/*Safari and Chrome*/
+@-webkit-keyframes fadein{
+	from {opacity:0;}
+	to  {opacity:1}
+}
+
+/*IE*/
+@-ms-keyframes fadein{
+	from {opacity:0;}
+	to  {opacity:1;}
+}
+
+/*Opera*/
+@-0-keyframes fadein{
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
+/*end of popup-map class in the map page*/
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*NO ONE CROSSES THIS LINE WITHOUT MY SAY SO. THAT INCLUDES YOU PANPAN*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+/*beginning of Kyle's code - Inventory styling*/
+
+#carousel_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  //border: 3px solid #CCC;
+  z-index: -1;
+  /*piss yellow*/
+  //background: linear-gradient(-15deg, #FFC200 1%, #808000 30%, #000000 100%);
+  /*blueish background*/
+  //background: linear-gradient(-15deg, #6495ED 1%, #C6E2FF 30%, #000000 100%);
+  /*grey*/
+  background: linear-gradient(-15deg, #000000 1%, #53868B 40%, #000000 100%);
+  opacity: 0.7;
+  }
+
+
+  #carousel_container #info{
+    width: 50%;
+    height: 100%;
+    border: 3px solid #CCC;
+    float: left;
+  }
+
+
+/*
+.container:before{
+
+	content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #FFC200 url("http://i.imgur.com/inAhQCX.png") no-repeat top center;
+    background-size: cover;
+    -webkit-filter: blur(10px);
+}
+*/
+
+  #carousel_container #carousel {
+    height: 350px;
+    width: 50%;
+    //margin-top: 20%;
+
+    margin: 10% auto 10% 50%; 
+    border: 3px solid #CCC;
+  }
+    #carousel_container #carousel ul {
+      list-style-type: none;
+      margin-top: 4px;
+      float: left;
+      width: 7000px;
+      overflow: hidden;
+      height: 100%;
+      margin-left: 0;
+      left: 0;
+      padding-left: 1px; }
+      #carousel_container #carousel ul li {
+        display: inline;
+        width: 180px;
+        height: 90%;
+        float: left;
+       //border: 3px solid #CCC; 
+        border-radius: 10px;
+        margin-right: 25px;
+        /*yellow*/
+        //background: #CCA300;
+        /*blue*/
+        background: #CDC9C9;
+        
+        opacity: 0.7;
+        box-shadow: inset 0 0 1px #54958A, inset 0 0 20px #465468;
+      }
+
+#carousel_container #carousel ul li a{
+    text-decoration: none;
+    top: 20px;
+    opacity: 0;
+  }
+
+
+#button_wrapper{
+  width: 150px;
+  margin: 0 auto; 
+  padding: .5rem;
+  bottom: 15%;
+  position: relative;
+}
+
+#button_wrapper button{
+  border-radius: .3rem;
+  cursor: pointer;
+  padding: .7rem;
+  box-shadow: inset 0 0 8px #54958A;
+  }
+
+  #button_wrapper button:hover{
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000; 
+  }
+
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box; }
