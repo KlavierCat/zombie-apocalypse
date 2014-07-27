@@ -1,5 +1,5 @@
 $(function(){
-var speed = 600,
+var speed = 1000,
     currSel = 0,
     itemCount = $('.carousel ul li')
                     .length,

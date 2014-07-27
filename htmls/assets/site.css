@@ -258,7 +258,7 @@ nav{
   /*blueish background*/
   //background: linear-gradient(-15deg, #6495ED 1%, #C6E2FF 30%, #000000 100%);
   /*grey*/
-  background: linear-gradient(-15deg, #CDC8B1 1%, #CDCDC1 10%, #000000 100%);
+  background: linear-gradient(-15deg, #000000 1%, #53868B 40%, #000000 100%);
   opacity: 0.7;
   }
 
@@ -308,9 +308,9 @@ nav{
         /*yellow*/
         //background: #CCA300;
         /*blue*/
-        background: #B0C4DE;
+        background: #CDC9C9;
         
-        //opacity: 0.3;
+        opacity: 0.7;
         box-shadow: inset 0 0 1px #54958A, inset 0 0 20px #465468;
       }
 
@@ -334,6 +334,10 @@ nav{
   cursor: pointer;
   padding: .7rem;
   box-shadow: inset 0 0 8px #54958A;
+  }
+
+  #button_wrapper button:hover{
+    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000; 
   }
 
 
