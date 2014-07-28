@@ -1,9 +1,9 @@
 $(function(){
 var speed = 1000,
     currSel = 0,
-    itemCount = $('.carousel ul li')
+    itemCount = $('#carousel ul li')
                     .length,
-    itemWidth = $('.carousel ul li')
+    itemWidth = $('#carousel ul li')
                   .css('width')
                     .split('px')[0] ;
 
@@ -16,7 +16,7 @@ $('#navNext').on('click',function(){
 
 
   //console.log((currSel*itemWidth));
-  $('.carousel ul').animate({marginLeft: '-' + (currSel*itemWidth) +'px'},speed);
+  $('#carousel ul').animate({marginLeft: '-' + (currSel*itemWidth) +'px'},speed);
 });
 
 $('#navPrev').on('click',function(){
@@ -24,7 +24,7 @@ $('#navPrev').on('click',function(){
                 ?itemCount
                 :(currSel))-5 ;
  //console.log((currSel*itemWidth));
-  $('.carousel ul')
+  $('#carousel ul')
     .animate(
       {marginLeft:
        '-'
