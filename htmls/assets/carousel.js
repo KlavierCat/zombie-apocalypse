@@ -32,5 +32,3 @@ $('#navPrev').on('click',function(){
        +'px'}
       ,speed);
 });
-
-});
