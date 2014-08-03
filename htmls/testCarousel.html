@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="js/jquery-1.11.1.js"></script>
- <link rel="stylesheet" href="assets/testSite.css" />
+<link rel="stylesheet" href="assets/testSite.css" />
 
-<script src="assets/jquery-1.11.1.min.js" ></script>
- <script src="assets/testCarousel.js"></script>
+
+  <script src="assets/jquery-1.11.1.min.js"></script>
+ <script src="assets/carousel.js"></script>
 </head>
 <body>
 
@@ -21,10 +21,10 @@
 
 <ul id="timeline">
 
-      <li>
+      <li class="selected">
         
         <div class="flag-wrapper">
-        <span class="flag">A New Discovery</span>
+        <span class="flag" id="2015">A New Discovery</span>
         <!--<span class="time">2015</span>-->
       </div>
       <div class="desc">
@@ -42,7 +42,7 @@
       <li>
         
         <div class="flag-wrapper">
-        <span class="flag">Research Commences</span>
+        <span class="flag" id="2018">Research Commences</span>
         <!--<span class="time">2018 - 2019</span>-->
       </div>
       
@@ -58,7 +58,7 @@
       <li>
         
         <div class="flag-wrapper">
-        <span class="flag">Accident</span>
+        <span class="flag" id="2019">Accident</span>
         <!--<span class="time">March 2020</span>-->
       </div>
       <div class="desc">
@@ -99,7 +99,7 @@ Overtime, more people become infected and violent upheavals breakout. Trinity Co
       <li>
         
         <div class="flag-wrapper">
-        <span class="flag">Disaster</span>
+        <span class="flag" id="2021">Disaster</span>
         <!--<span class="time">2021 - Unknown</span>-->
       </div>
       <div class="desc">
@@ -115,36 +115,16 @@ Overtime, more people become infected and violent upheavals breakout. Trinity Co
 
 <div id="carousel_container">
 
-  
-  
-  <div id="carousel">
-    <ul>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="file:///C:/Users/ULStaff/Webpage_projects/zombie-apocalypse/htmls/testing-leaflet-ryan-map-4.html">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li><li><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a></li>
-      <li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-      <li><a href="#">Vestibulum auctor dapibus neque.</a></li>
+  <ul id="carousel">
+    
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+
     </ul>  
-    </div>
     <div id="button_wrapper">
     <button id="navPrev">Prev</button>
   <button id="navNext">Next</button>

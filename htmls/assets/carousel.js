@@ -1,34 +1,48 @@
 $(function(){
-var speed = 1000,
-    currSel = 0,
-    itemCount = $('#carousel ul li')
-                    .length,
-    itemWidth = $('#carousel ul li')
-                  .css('width')
-                    .split('px')[0] ;
 
-$('#navNext').on('click',function(){
-  currSel = (currSel+5)%itemCount;
+  
+    var elems = $('#carousel li'),
+    $speed = 800,
+    $currentSelection = 0,
+    $itemCount = elems.length,
+    $timeline = $('#timeline li'),
+    $itemWidth = elems.css('width').split('px')[0];
 
-  //while less than itemCount currSel will always increment by 1
-  //when equal to itemCount it will return to the 0th index
-  //modulus is a useful operator for iterating through an array that needs to reset itself
+function panCarousel(e){
+	
+	if(e.data.direction == 'forward'){
+		$currentSelection = ($currentSelection+1)%$itemCount;
+		$('#carousel').animate({
+			
+			marginLeft: '-' + ($currentSelection*$itemWidth) + 'px'
+		}, $speed);
+		
+		$timeline.eq($currentSelection).siblings().fadeOut('slow')
+		.removeClass('selected').end().fadeIn('slow').addClass('selected');
+	
+
+		}else{
+		
+		$currentSelection = ($currentSelection===0) ? $itemCount : ($currentSelection-1);
+		$('#carousel').animate(		
+		{
+		marginLeft : '-' + ($currentSelection*$itemWidth) + 'px'
+		}, $speed);
 
 
-  //console.log((currSel*itemWidth));
-  $('#carousel ul').animate({marginLeft: '-' + (currSel*itemWidth) +'px'},speed);
+		$timeline.eq($currentSelection).siblings().fadeOut('slow')
+		.removeClass('selected').end().fadeIn('slow').addClass('selected');
+
+}
+	
+
+}
+
+$('#navNext').bind('click', {direction: 'forward'}, panCarousel);
+$('#navPrev').bind('click', {direction: 'backward'}, panCarousel);
+
 });
 
-$('#navPrev').on('click',function(){
-  currSel =((currSel==0)
-                ?itemCount
-                :(currSel))-5 ;
- //console.log((currSel*itemWidth));
-  $('#carousel ul')
-    .animate(
-      {marginLeft:
-       '-'
-       +(currSel*itemWidth)
-       +'px'}
-      ,speed);
-});
+
+
+//% modulus a useful operator to RESET value back to 0

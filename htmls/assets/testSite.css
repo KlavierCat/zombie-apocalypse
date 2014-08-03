@@ -246,37 +246,6 @@ nav{
 
 /*beginning of Kyle's code - Inventory styling*/
 
-#carousel_container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  //border: 3px solid #CCC;
-  z-index: -1;
-  /*piss yellow*/
-  //background: linear-gradient(-15deg, #FFC200 1%, #808000 30%, #000000 100%);
-  /*blueish background*/
-  //background: linear-gradient(-15deg, #6495ED 1%, #C6E2FF 30%, #000000 100%);
-  /*grey*/
-  //background: linear-gradient(-30deg, #000000 1%, #4B4140 50%, #000000 100%);
-  //background: #282537;
-  /* gradients from codepen*/
- //background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
- //background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
- //background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
- //background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
- //background-image: linear-gradient(#8b9da9, #fff6e4);
-  background: linear-gradient(to bottom, #45484d, #000000);
- /* more codepen gradients 
- background: rgb(244,226,156);
-background: -moz-linear-gradient(-45deg, rgba(244,226,156,0) 0%, rgba(59,41,58,1) 100%), -moz-linear-gradient(left, rgba(244,226,156,1) 0%, rgba(130,96,87,1) 100%);
-background: -webkit-linear-gradient(-45deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%), -webkit-linear-gradient(left, rgba(244,226,156,1) 0%,rgba(130,96,87,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%), -ms-linear-gradient(left, rgba(244,226,156,1) 0%,rgba(130,96,87,1) 100%);
-background: linear-gradient(135deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%), linear-gradient(to right, rgba(244,226,156,1) 0%,rgba(130,96,87,1) 100%);
-*/
-  /*opacity: 0.7;*/
-  }
-
 
 #timeline{
 
@@ -296,20 +265,19 @@ background: linear-gradient(135deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%
 
 
 #timeline li{
- padding: 2.5em 0;
+
+ display:none;
+}
+
+#timeline li.selected{
+ 
+
+  padding: 2.5em 0;
+  margin-top: 5em;
  line-height: 1.5em;
 
 }
 
-
-
-.hidden{
-  visibility: hidden;
-}
-
-.show{
-  visibility: visible;
-}
 
 
 
@@ -369,27 +337,60 @@ background: linear-gradient(135deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%
 }
 
 
-  #carousel {
-    height: 350px;
-    width: 50%;
-    //margin-top: 20%;
-    margin: 10% auto 10% 50%; 
-    //border: 3px solid #CCC;
+#carousel_container {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  overflow: hidden;
+  //border: 3px solid #CCC;
+  z-index: -1;
+  /*piss yellow*/
+  //background: linear-gradient(-15deg, #FFC200 1%, #808000 30%, #000000 100%);
+  /*blueish background*/
+  //background: linear-gradient(-15deg, #6495ED 1%, #C6E2FF 30%, #000000 100%);
+  /*grey*/
+  //background: linear-gradient(-30deg, #000000 1%, #4B4140 50%, #000000 100%);
+  //background: #282537;
+  /* gradients from codepen*/
+ //background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ //background-image: -moz-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ //background-image: -o-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ //background-image: radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+ //background-image: linear-gradient(#8b9da9, #fff6e4);
+  background: linear-gradient(to bottom, #45484d, #000000);
+ /* more codepen gradients 
+ background: rgb(244,226,156);
+background: -moz-linear-gradient(-45deg, rgba(244,226,156,0) 0%, rgba(59,41,58,1) 100%), -moz-linear-gradient(left, rgba(244,226,156,1) 0%, rgba(130,96,87,1) 100%);
+background: -webkit-linear-gradient(-45deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%), -webkit-linear-gradient(left, rgba(244,226,156,1) 0%,rgba(130,96,87,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%), -ms-linear-gradient(left, rgba(244,226,156,1) 0%,rgba(130,96,87,1) 100%);
+background: linear-gradient(135deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%), linear-gradient(to right, rgba(244,226,156,1) 0%,rgba(130,96,87,1) 100%);
+*/
+  /*opacity: 0.7;*/
   }
-    #carousel_container #carousel ul {
+
+
+
+
+    
+
+   #carousel{
+      height: 350px;
       list-style-type: none;
       margin-top: 4px;
       float: left;
       width: 7000px;
       overflow: hidden;
-      height: 100%;
-      margin-left: 0;
-      left: 0;
-      padding-left: 1px; }
-      #carousel_container #carousel ul li {
+      
+      margin-top: 7.5em;
+      
+      
+      //left: 3em;
+       }
+
+      #carousel_container #carousel li {
         display: inline;
         width: 180px;
-        height: 90%;
+        height: 300px;
         float: left;
        //border: 3px solid #CCC; 
         border-radius: 5px;
@@ -398,12 +399,13 @@ background: linear-gradient(135deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%
         //background: #CCA300;
         /*blue*/
         opacity: 0.7;
+        //background-image: url("images/Found_Letter.jpg");
       
    background: #34495e;
 
         }
 
-#carousel_container #carousel ul li a{
+#carousel_container #carousel li a{
     text-decoration: none;
     top: 20px;
     opacity: 0;
@@ -425,12 +427,6 @@ background: linear-gradient(135deg, rgba(244,226,156,0) 0%,rgba(59,41,58,1) 100%
   background: #8b9da9;
   box-shadow: inset 0 0 8px #54958A;
   }
-
-  #button_wrapper button:hover{
-    box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000; 
-  }
-
-
 
 
 *, *:before, *:after {
