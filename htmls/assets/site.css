@@ -1,9 +1,13 @@
-/*last modified: July 24, by Panpan*/
+/*last modified: July 29, by Panpan*/
 /*current support browser size: no smaller than 632*427, 
 which basically means support tablets but not phones */
 
-/*universal*/
+/* ========================== Touch these and you will die!!!!! ======================== */
+/* ============================ universal ==========================*/
+html { height: 100% }
+
 body{
+  height:100%;
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,151 +23,326 @@ div{
   display:block;
 }
 
-.corner{
-  position:fixed;
-  z-index:800;
-/*  height:90px;
-  width:150px;*/
+*, *:after, *:before{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
 }
 
+/* =========== logo and mute ========= */
 #corner-logo{
   left:0px;
   top:0px;
-/*  border-bottom:2px solid #B9B9B9;*/
 }
-
-/*
-.#corner-logo img{
-  max-height:90px;
-}
-*/
 
 #corner-mute{
-	right:0px;
-	top:0px;
- /*   border-bottom:2px solid #B9B9B9;*/
-}
-
-
-#corner-mute img{
-	position:fixed;
+    position:fixed;
 	right:20px;
 	top:20px;
-	max-height:50px;
+    height:60px;
+    width:60px;
 }
 
-/*just liberated*/
+#corner-mute-false{
+    position:relative;
+    width:60px;
+    height:60px;
+    background-image: url(../images/icon-mute-false.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#corner-mute-false:hover{
+    background-image:url(../images/icon-mute-false-hover.png);
+    -ms-transform:translate(5px,-5px);
+    -webkit-transform:translate(5px,-5px);
+    transform:translate(5px,-5px);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#corner-mute-true{
+    position:relative;
+    width:60px;
+    height:60px;
+    background-image: url(../images/icon-mute-true.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#corner-mute-true:hover{
+    background-image:url(../images/icon-mute-true-hover.png);
+    -ms-transform:translate(5px,-5px);
+    -webkit-transform:translate(5px,-5px);
+    transform:translate(5px,-5px);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+@media only screen and (min-width:1280px){
+    #corner-logo img{
+        height:130px;
+    }
+}
+
+@media only screen and (max-width:1279px){
+    #corner-logo img{
+        height:100px;
+    }
+}
+
+@media only screen and (max-width:800px){
+    #corner-logo img{
+        height:70px;
+    }
+    #corner-mute{
+	   right:15px;
+	   top:15px;
+	   height:40px;
+       width:40px;
+    }
+    #corner-mute-true{
+        width:40px;
+        height:40px;
+    }
+    #corner-mute-false{
+        width:40px;
+        height:40px;
+    }
+}
+
+
+/* ========= end of logo and mute =========*/
+
+/* =========== footer ===========*/
+.corner{
+    position:fixed;
+    z-index:800;
+    height:50px;
+    bottom:0px;
+	border-top:2px solid rgba(255,255,255,0.5);
+    background-color:rgba(88,88,88,0.5);
+}
+
 #corner-footer{
-	height:60px;
-	width:170px;
+	width:100px;
 	left:0px;
-	bottom:0px;
-	border-top:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
 }
 
-#corner-nav{
-	height:60px;
-	width:170px;
+footer{
+  position:fixed;
+  z-index:300;
+  left:12px;
+  bottom:10px;
+}
+
+.footer-icon{
+    position:relative;
+    display:inline-block;
+    background-size:contain;
+    background-repeat: no-repeat;
+	height:35px;
+	width:35px;
+	margin-bottom:-8px;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+#icon-facebook{
+    background-image: url(../images/icon-facebook.png);
+}
+
+#icon-facebook:hover{
+    background-image:url(../images/icon-facebook-hover.png);
+}
+
+#icon-twitter{
+    background-image: url(../images/icon-twitter.png);
+}
+
+#icon-twitter:hover{
+    background-image:url(../images/icon-twitter-hover.png);
+}
+
+.footer-icon:hover{
+   margin-bottom:-5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+/* ========= right corner without view filter =========*/
+#corner-about-only{
+    width:55px;
+    right:0px;
+}
+
+/* ========== end of right corner without view filter =========*/
+
+/* ========== right corner with view filter ===========*/
+
+#corner-view{
+	width:200px;
 	right:0px;
-	bottom:0px;
-	border-top:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
 }
 
+#view{
+	position:fixed;
+	right:65px;
+	bottom:15px;
+	color:#ECECEC;
+	font-size:0.9em;
+}
 
-#footer-wrapper{
+#view select{
+    width:80px;
+    height:20px;
+    background-color:inherit;
+    color:white;
+}
+
+#view option{
+    background-color:rgba(88,88,88,1);
+    color:white;
+}
+
+#icon-about{
+    position:fixed;
+    right:10px;
+    bottom:12px;
+    background-image: url(../images/icon-about.png);
+}
+
+#icon-about:hover{
+    background-image: url(../images/icon-about-hover.png);
+}
+
+/* ============ end of right corner with view filter========*/
+
+/* ===== map/inventory view =====*/
+
+.footer-wrapper{
     position:fixed;
     width:100%;
     height:80px;
     bottom:0px;
 }
-/*
-#middle{
-	position:fixed;
-	z-index:500;
-	height:60px;
-	width:20%;
-	left:40%;
-	bottom:0px;
-	border:1px solid white;
-}
-*/
 
-#middle{
+.icon-menu-background{
+    position:relative;
+    height:80px;
+    width:373px;
+    bottom:0px;
+    margin:0 auto;
+    background-image:url("../images/icon-menu-background.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.middle{
 	position:relative;
 	z-index:500;
 	height:80px;
-	width:180px;
+	width:223px;
 	bottom:0px;
-	margin: 0 auto;
+	margin-left: 15%;
 }
 
-#corner-map{
-    position:relative;
-    height:80px;
-    width:88px;
-    float:left;
-    border:1px solid white;
+
+.middle div:hover{
+   -webkit-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    transform:scale(1.1);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
-#corner-map img{
+#inventory-corner{
     position:relative;
-    max-height:70%;
-    max-width:70%;
-    left:15%;
-    bottom:-15%;
-}
-
-#corner-inventory{
-    position:relative;
-    height:80px;
-    width:88px;
+    height:60px;
+    width:60px;
+    bottom:-15px;
     float:right;
-    border:1px solid white;
+    right:15px;
+    background-image:url(../images/icon_inventory.png);
+    background-size:contain;
+    background-repeat:no-repeat;
 }
 
-#corner-inventory img{
+#inventory-corner:hover{
+    background-image:url(../images/icon_inventory_hover.png);
+}
+
+#map-corner{
     position:relative;
-    max-height:70%;
-    max-width:70%;
-    left:15%;
-    bottom:-15%;
+    height:60px;
+    width:60px;
+    bottom:-15px;
+    float:left;
+    left:15px;
+    background-image:url(../images/icon_map.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#map-corner:hover{
+    background-image: url(../images/icon_map_hover.png);
+}
+
+
+/* ===== end of map/inventory view =====*/
+
+/* ======= triangle and diagonal lines ======*/
+
+.nav-arrow{
+    position:fixed;
+    width:0px;
+    height:0px;
+}
+
+#nav-arrow-left{
+    bottom:-38px;
+    right:47px;
+    border-top:53px solid transparent;
+    border-bottom:32px solid transparent;
+    
+    border-left:33px solid rgba(88,88,88,0.5);
+    transform:rotate(32deg);
+}
+
+#nav-arrow-left-filter{
+    bottom:-38px;
+    right:192px;
+    border-top:53px solid transparent;
+    border-bottom:32px solid transparent;
+    
+    border-left:33px solid rgba(88,88,88,0.5);
+    transform:rotate(32deg);
+}
+
+#nav-arrow-right{
+    bottom:-38px;
+    left:92px;
+    border-top:53px solid transparent;
+    border-bottom:32px solid transparent;
+    
+    border-right:33px solid rgba(88,88,88,0.5);
+    transform:rotate(-32deg);
 }
 
 .diagonal-line{
 	position:fixed;
-	width:105px;
-	height:1px;
+    z-index:-350;
 }
-/*
-#northWest{
-	left:123px;
-	top:45px;
-	border-top:2px solid #B9B9B9;
-	-webkit-transform:rotate(-60deg);
-	-moz-transform:rotate(-60deg);
-	-o-transform:rotate(-60deg);
-	-ms-transform:rotate(-60deg);
-	transform:rotate(-60)deg;
-}
-
-
-#northEast{
-	right:123px;
-	top:45px;
-	border-top:2px solid #B9B9B9;
-	-webkit-transform:rotate(60deg);
-	-moz-transform:rotate(60deg);
-	-o-transform:rotate(60deg);
-	-ms-transform:rotate(60deg);
-	transform:rotate(60)deg;	
-}
-*/
 
 #southWest{
-	width:71px;
-	left:152px;
-	bottom:30px;
-	border-bottom:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
+	width:57px;
+	left:86px;
+	bottom:24px;
+	border-bottom:2px solid rgba(255,255,255,0.7);
 	-webkit-transform:rotate(60deg);
 	-moz-transform:rotate(60deg);
 	-o-transform:rotate(60deg);
@@ -172,72 +351,36 @@ div{
 }
 
 #southEast{
-	width:71px;
-	right:152px;
-	bottom:30px;
-	border-bottom:2px solid rgba(224,224,224,0.8)/*#B9B9B9*/;
+	width:57px;
+	right:41px;
+	bottom:24px;
+	border-bottom:2px solid rgba(255,255,255,0.7);
+	-webkit-transform:rotate(-60deg);
+	-moz-transform:rotate(-60deg);
+	-o-transform:rotate(-60deg);
+	-ms-transform:rotate(-60deg);
+	transform:rotate(-60deg);	    
+}
+
+#southEastFilter{
+	width:57px;
+	right:186px;
+	bottom:24px;
+	border-bottom:2px solid rgba(255,255,255,0.7);
 	-webkit-transform:rotate(-60deg);
 	-moz-transform:rotate(-60deg);
 	-o-transform:rotate(-60deg);
 	-ms-transform:rotate(-60deg);
 	transform:rotate(-60deg);	
 }
+/* ====== end of triangle and diagonal lines ======= */
 
-footer{
-  position:fixed;
-  z-index:300;
-  left:20px;
-  bottom:10px;
-}
 
-footer a{
-    color:#ececec;
-    font-size:1em;
-	line-height:20px;
-}
+/* =========================== end of universal =========================*/
 
-footer img{
-	position:relative;
-	max-height:30px;
-	max-width:30px;
-	margin-bottom:-7px;
-}
 
-nav{
-	position:fixed;
-	right:30px;
-	bottom:20px;
-	color:#ECECEC;
-	font-size:1.3em;
-}
 
-.view-nav{
-	position:fixed;
-	bottom:0px;
-	height:42px;
-}
-
-.view-nav img{
-	position:relative;
-	margin:5px 10px;
-	max-height:30px;
-	max-width:30px;
-}
-
-#map-nav{
-	position:fixed;
-	right:350px;
-	border-right:1px solid #B9B9B9;
-}
-
-#inv-nav{
-	position:fixed;
-	right:300px;
-	border-right:1px solid #B9B9B9;
-}
-/*end of universal*/
-
-/*template-item*/
+/* ============================ template-item =========================*/
 .item-wrapper{
     position:fixed;
     width: 48%;
@@ -289,9 +432,30 @@ nav{
     max-height:100%;
     max-width:100%;
 }
-/*end of template-item*/
+/* ===================== end of template-item =====================*/
+
+
 
 /*map-based universal*/
+
+/*Google map basic setting, including hiding Google map logo*/
+#map-canvas { height: 100% }
+
+.gm-style a{
+    visibility:hidden;
+}
+.gmnoprint{
+    visibility:hidden;
+}
+.gmnoprint gm-style-cc{
+    visibility:hidden;
+}
+.gm-style-cc{
+    visibility:hidden;
+}
+/*end of Google map basic setting*/
+
+
 #map{
   position:absolute; 
   top:0; 
@@ -414,7 +578,7 @@ nav{
 }
 
 /*end of light-box*/
-
+/* ============================ end of touch these and you will die!!!!! =========================*/
 
 
 
@@ -506,6 +670,3 @@ nav{
   cursor: pointer; 
   }
 
-
-*, *:before, *:after {
-  box-sizing: border-box; }

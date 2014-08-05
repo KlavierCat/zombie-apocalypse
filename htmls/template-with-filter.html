@@ -5,13 +5,16 @@
 	<meta charset=utf-8 />
 	<title>Trinity Zombie Dublin</title>
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1.2' />
-	<!--MapBox stylesheet and script-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='assets/site.css' rel="stylesheet"/>
+<!--    <script src="assets/site.js"></script>->
+        
+	<!--Map stylesheet and script-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="assets/markers.geojson"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" rel='stylesheet' />
-	<!--end of MapBox stylesheet and script-->
-	<link href='assets/site.css' rel="stylesheet"/>
+	<!--end of Map stylesheet and script-->
 </head>
 
 <body>
@@ -34,7 +37,14 @@
 	  </footer>
 	</div>
 	
-	<div class="corner" id="corner-about-only">
+	<div class="corner" id="corner-view">
+		<div id="view">
+            View:
+			<select id="filter" name="filter">
+                <option value="0" selected="selected">All</option>
+                <option value="1">Unlocked</option>
+            </select>
+		</div>
         <a href="#"><div class="footer-icon" id="icon-about"></div></a>
 	</div>
 
@@ -42,7 +52,7 @@
      <div class="icon-menu-background">    
         
 	  <div class="middle">
-        
+
         <a href="#">
             <div id="map-corner"></div>  
         </a>
@@ -57,32 +67,11 @@
     </div>    
 
 	<div class="diagonal-line" id="southWest"></div>
-	<div class="diagonal-line" id="southEast"></div>
-    <div class="nav-arrow" id="nav-arrow-left"></div>
+	<div class="diagonal-line" id="southEastFilter"></div>
+    <div class="nav-arrow" id="nav-arrow-left-filter"></div>
     <div class="nav-arrow" id="nav-arrow-right"></div>
-<!--end of header and footer in template-->	  
-
-    <div class="item-wrapper">
-        <div class="item-description">
-            <table>
-                <thead><th colspan='2'>EVIDENCE #00</th></thead>
-                    <tr>
-                        <td>LOCATION:</td>
-                        <td>location</td>
-                    </tr>
-                    <tr>
-                        <td>DATE:</td>
-                        <td>date<br/>(month year)</td>
-                    </tr>
-            </table>
-        </div>
-<!--Todo: click item, open lightbox for examination-->
-        <div class="item-content">
-            <div class='item-content-holder'>
-            </div>            
-        </div>
-    </div>
-
+<!--end of header and footer in template-->	    
+    
 </body>
 
 </html>
