@@ -23,66 +23,50 @@
 	
 
 <!--beginning of header and footer in template-->		
-	<class="corner" id="corner-logo">
+	<div id="corner-logo">
 	  <a href="#"><img src="images/logo-trans.png" alt="TZD logo"></a>
 	</div>
 	  
-	<div class="corner" id="corner-mute">
-	  <img src="images/icon-mute.png" alt="sound control">
+	<div id="corner-mute">
+        <div id="corner-mute-false"></div>
+	  <!--<img src="images/icon-mute-false.png" alt="sound control">-->
 	</div>
-        
-<!--Todo: reset css for corner elements, liberate logo and mute icon-->
 
 	<div class="corner" id="corner-footer">
 	  <footer>
-		<a href="#">About</a>
-		&nbsp; 
-		<a href="#"><img src="images/ficon-6.png" alt="Facebook"></a>
-		&nbsp; 
-		<a href="#"><img src="images/ticon-6.png" alt="Twitter"></a>
+		<a href="#"><div class="footer-icon" id="icon-facebook"></div></a>
+		&nbsp;
+		<a href="#"><div class="footer-icon" id="icon-twitter"></div></a>
 	  </footer>
 	</div>
 	
-	<div class="corner" id="corner-nav">
-		<nav>
-			FILTERS
-		</nav>
+	<div class="corner" id="corner-about-only">
+        <a href="#"><div class="footer-icon" id="icon-about"></div></a>
 	</div>
-	
-        <div id="footer-wrapper">
-	  <div id="middle">
-		<div id="corner-map">
-			<a href="testing-leaflet-ryan-map-4.html"><img src="images/icon_map.png"></a>
-		</div>
-		
-		<div id="corner-inventory">
-			<a href="kyle-inventory-carousel.html"><img src="images/icon_inventory.png"></a>
-		</div>
+
+    <div class="footer-wrapper">
+     <div class="icon-menu-background">    
+        
+	  <div class="middle">
+        
+        <a href="#">
+            <div id="map-corner"></div>  
+        </a>
+          
+        <a href="#">
+            <div id="inventory-corner"></div>
+        </a>
+          
 	  </div>
-        </div>
-	
-<!--	<div class="diagonal-line" id="northWest"></div>-->
-<!--	<div class="diagonal-line" id="northEast"></div>-->
+         
+     </div>
+    </div>    
+
 	<div class="diagonal-line" id="southWest"></div>
 	<div class="diagonal-line" id="southEast"></div>
-	  
-<!--	
-	<div class="bar-container">
-	  <nav>
-		<span>Map | </span>
-		<span>Time | </span>
-		<span id="span-filter">Filters of Sources of Material with Counters</span>
-	  </nav>
-	  <footer>
-		<a href="#">About</a>
-		<a href="#">Ficon</a>
-		<a href="#">Ticon</a>
-	  </footer>
-	</div>
--->
-
-<!--end of header and footer in template-->	
-
+    <div class="nav-arrow" id="nav-arrow-left"></div>
+    <div class="nav-arrow" id="nav-arrow-right"></div>
+<!--end of header and footer in template-->	   
 
 </body>
 
